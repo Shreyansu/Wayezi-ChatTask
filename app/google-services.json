@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "924520259307",
+    "firebase_url": "https://wayezi-chat.firebaseio.com",
+    "project_id": "wayezi-chat",
+    "storage_bucket": "wayezi-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924520259307:android:51794fd8d3903e7f3468ae",
+        "android_client_info": {
+          "package_name": "com.example.wayezi_onetoonechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924520259307-l9m5uai3mn9jqn3gcbupkd68ngic68um.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wayezi_onetoonechat",
+            "certificate_hash": "504c6ac537543716aca444bdbdf20983c95ef1eb"
+          }
+        },
+        {
+          "client_id": "924520259307-utnnbajb7ujani414pgr729mbhtgul6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw7HemT3_LOuaYW7wPijq8I8WzBNQCinA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924520259307-utnnbajb7ujani414pgr729mbhtgul6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
