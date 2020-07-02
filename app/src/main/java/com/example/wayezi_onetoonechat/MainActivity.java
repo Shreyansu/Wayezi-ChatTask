@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private FirebaseAuth mAuth;
     private Spinner spinner;
+    SharedPreferences preferences;
 
 
     private ProgressDialog LoadingBar;
@@ -49,6 +50,20 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        preferences=getSharedPreferences("details",MODE_PRIVATE);
+        if(user!=null){
+            String s1=preferences.getString("name","");
+            String s2=preferences.getString("phone","");
+            Intent HomeIntent = new Intent(MainActivity.this,HomeActivity.class);
+            HomeIntent.putExtra("number",s2);
+            HomeIntent.putExtra("name",s1);
+            ///nb
+            startActivity(HomeIntent);
+            finish();
+
+        }
+
 
 //        CurrentUserID = mAuth.getCurrentUser().getUid();
 
@@ -195,6 +210,10 @@ public class MainActivity extends AppCompatActivity {
         Intent HomeIntent = new Intent(MainActivity.this,HomeActivity.class);
         HomeIntent.putExtra("number",phoneNumber);
         HomeIntent.putExtra("name",name);
+        SharedPreferences.Editor myEdit
+                = preferences.edit();
+        myEdit.putString("name",name);
+        myEdit.putString("number",phoneNumber);
         startActivity(HomeIntent);
         finish();
     }
